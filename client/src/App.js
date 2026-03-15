@@ -1,7 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { Navigation } from "./routes/route";
 
-function App() {
+/*function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -20,6 +21,13 @@ function App() {
       </header>
     </div>
   );
-}
+}*/
 
+function App() {
+  return (
+    <>
+      <Navigation></Navigation>
+    </>
+  );
+}
 export default App;
