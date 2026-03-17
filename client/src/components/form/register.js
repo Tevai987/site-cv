@@ -1,7 +1,6 @@
 import { useDispatch } from "react-redux";
 import { addUser } from "../../store/slices/users/usersSlices.js";
 import "./styleSheet/register.scss";
-
 export const Register = () => {
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
@@ -34,16 +33,46 @@ export const Register = () => {
   };
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <h2>Register</h2>
-          <input type="text" name="name" placeholder="Name"></input>
-          <input type="text" name="email" placeholder="Email"></input>
-          <input type="password" name="password" placeholder="Password"></input>
-
-          <input type="submit" defaultValue="Register" />
-        </div>
-      </form>
+      <section className="container">
+        <section>
+          <form onSubmit={handleSubmit} className="boxForm">
+            <div>
+              <h1>Formulaire d'inscription.</h1>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                className="input-button"
+              ></input>
+            </div>
+            <div>
+              <input
+                type="text"
+                name="email"
+                placeholder="Email"
+                className="input-button"
+              ></input>
+            </div>
+            <div>
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                className="input-button"
+              ></input>
+            </div>
+            <div>
+              <input
+                type="submit"
+                defaultValue="Submit"
+                className="submit-button"
+              />
+            </div>
+          </form>
+        </section>
+      </section>
     </>
   );
 };
