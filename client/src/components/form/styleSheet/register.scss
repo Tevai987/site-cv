@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
 
-body {
-  margin: 0;
+* {
+  box-sizing: border-box;
 }
 
-.container {
+body {
+  margin: 0;
   width: 100%;
   background: linear-gradient(
     334deg,
@@ -12,14 +13,135 @@ body {
     rgba(87, 199, 133, 1) 50%,
     rgba(237, 221, 83, 1) 100%
   );
-  padding: 40px;
+  background-attachment: fixed;
+}
+
+.container {
+  .boxFormRegister {
+    background-color: white;
+    padding: 30px;
+    width: 800px;
+    height: 550px;
+    border-radius: 3cap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .link-button {
+      justify-content: center;
+      text-decoration: none;
+      font-family: "Archivo Black", sans-serif;
+      font-size: 14px;
+      display: flex;
+    }
+
+    .link-button:hover {
+      color: #fbc731;
+    }
+
+    .input-button {
+      width: 350px;
+      height: 40px;
+      border-radius: 5px;
+      border: solid 1px;
+      border-color: #f2f2f2;
+      background-color: #f2f2f2;
+      margin-bottom: 20px;
+      font-family: "Archivo Black", sans-serif;
+      padding-left: 15px;
+    }
+
+    .submit-button {
+      width: 250px;
+      height: 40px;
+      border-radius: 15px;
+      font-family: "Archivo Black", sans-serif;
+      font-size: 14px;
+      background-color: #fbc731;
+      color: white;
+      letter-spacing: 1px;
+      border: none;
+    }
+  }
+}
+
+.submit-button:hover {
+  background-color: #a34ca3;
+  color: white;
+  cursor: pointer;
+  font-family: "Archivo Black", sans-serif;
+}
+
+h1 {
+  font-family: "Archivo Black", sans-serif;
+  color: black;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+p {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 14px;
+}
+
+.container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .boxCreateAccount {
+    background-color: white;
+    padding: 50px;
+    width: 500px;
+    height: 350px;
+    border-radius: 3cap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    .connect-button {
+      width: 250px;
+      height: 40px;
+      border-radius: 15px;
+      font-family: "Archivo Black", sans-serif;
+      font-size: 14px;
+      background-color: #fbc731;
+      color: white;
+      letter-spacing: 1px;
+      border: none;
+    }
+
+    .connect-button:hover {
+      background-color: #a34ca3;
+      color: white;
+      cursor: pointer;
+      font-family: "Archivo Black", sans-serif;
+    }
+
+    h1 {
+      font-family: "Archivo Black", sans-serif;
+      color: black;
+      font-size: 25px;
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    p {
+      font-family: "Archivo Black", sans-serif;
+      font-size: 14px;
+    }
+  }
+}
+
+.container {
   .boxForm {
     background-color: white;
+    padding: 50px;
     width: 800px;
-    height: 400px;
+    height: 500px;
     border-radius: 3cap;
     display: flex;
     flex-direction: column;
@@ -38,8 +160,8 @@ body {
     }
 
     .submit-button {
-      width: 100px;
-      height: 30px;
+      width: 250px;
+      height: 40px;
       border-radius: 15px;
       font-family: "Archivo Black", sans-serif;
       font-size: 14px;
@@ -64,5 +186,10 @@ body {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
+  }
+
+  p {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 14px;
   }
 }

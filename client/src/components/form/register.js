@@ -1,8 +1,13 @@
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { addUser } from "../../store/slices/users/usersSlices.js";
 import "./styleSheet/register.scss";
+import { useNavigate } from "react-router-dom";
+
 export const Register = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -35,7 +40,7 @@ export const Register = () => {
     <>
       <section className="container">
         <section>
-          <form onSubmit={handleSubmit} className="boxForm">
+          <form onSubmit={handleSubmit} className="boxFormRegister">
             <div>
               <h1>Formulaire d'inscription.</h1>
             </div>
@@ -69,6 +74,12 @@ export const Register = () => {
                 defaultValue="Submit"
                 className="submit-button"
               />
+            </div>
+            <div>
+              <p>Vous avez déjà un compte ?</p>
+              <Link to="/login" className="link-button">
+                Connectez-vous
+              </Link>
             </div>
           </form>
         </section>
