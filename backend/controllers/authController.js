@@ -129,3 +129,41 @@ export const login = async (req,res) => {
     }
     
 };
+
+// Mettre à jour la donnée d'un utilisateur
+
+export const updateUser = async (req, res) => {
+
+    try {
+
+        const updateUser = await User.findByIdAndUpdate (
+            req.params.id,
+            req.body,
+            { new: true }
+        )
+
+        if(!updateUser){
+
+            return res.status(404).json({message: 'Utilisateur non trouvé'});
+        }
+
+        /*res.status(200).json({message: 'Utilisateur mis à jour avec succès', user: updateUser});*/
+
+        // On n'affiche pas le mot de passe dans la réponse et le rôle de l'utilisateur pour des raisons de sécurité
+
+        const safeUser = {
+
+            id: updateUser._id,
+            name: updateUser.name,
+            email: updateUser.email,
+        }
+
+        return res.status(200).json({message: 'Utilisateur mis à jour avec succès', user: safeUser});
+
+    }catch(err){
+
+        return res.status(500).json({message: 'Erreur Serveur', err})
+
+    }
+
+};
